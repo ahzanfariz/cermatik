@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,8 +27,6 @@ class _QuizResultPageState extends State<QuizResultPage> {
   int _numRewardedLoadAttempts = 0;
   int maxFailedLoadAttempts = 3;
 
-  static const rewardedButtonText = 'RewardedAd';
-  static const rewardedInterstitialButtonText = 'RewardedInterstitialAd';
   static final AdRequest request = AdRequest(
     keywords: <String>['foo', 'bar'],
     contentUrl: 'http://foo.com/bar.html',

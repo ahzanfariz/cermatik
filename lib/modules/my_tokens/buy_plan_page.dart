@@ -27,7 +27,6 @@ class _BuyPlanPageState extends State<BuyPlanPage> {
   var controller;
 
   Timer? _timer;
-  EasyLoadingStatus? _easyLoadingStatus = EasyLoadingStatus.show;
 
   @override
   void initState() {

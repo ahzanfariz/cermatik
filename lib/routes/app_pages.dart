@@ -1,9 +1,6 @@
 import 'package:get/get.dart';
 import 'package:quizzie_thunder/modules/success_payment/success_payment_page.dart';
 
-import '../modules/create_new_password/create_new_password_binding.dart';
-import '../modules/create_new_password/create_new_password_page.dart';
-import '../modules/quizzes/quizzes_page.dart';
 import 'app_routes.dart';
 
 class AppPages {

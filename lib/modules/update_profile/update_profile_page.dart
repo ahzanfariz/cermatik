@@ -15,10 +15,9 @@ import 'package:scoped_model/scoped_model.dart';
 
 import '../../theme/colors_theme.dart';
 import '../../utils/app_utils.dart';
-import '../../widgets/choose_avatar_bottom_sheet.dart';
 
 class UpdateProfilePage extends StatefulWidget {
-  MainModel model;
+  final MainModel model;
 
   UpdateProfilePage(this.model);
 
@@ -41,7 +40,6 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
   final ImagePicker _picker = ImagePicker();
 
   late XFile _imageFile;
-  dynamic _pickImageError;
 
   @override
   void initState() {
@@ -633,9 +631,7 @@ class _UpdateProfilePageState extends State<UpdateProfilePage> {
     } catch (e) {
       _timer?.cancel();
       await EasyLoading.dismiss();
-      setState(() {
-        _pickImageError = e;
-      });
+      print(e);
     }
     // });
   }

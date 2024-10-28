@@ -68,7 +68,6 @@ class _QuizzesPageState extends State<QuizzesPage> {
                 itemCount: widget.category.question!.length,
                 padding: const EdgeInsets.only(top: 16, bottom: 24),
                 itemBuilder: (context, index) {
-                  var question = widget.category.question![index];
                   return InkWell(
                       onTap: () {
                         // Get.toNamed(AppRoutes.quizDetailPage, arguments: {

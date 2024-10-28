@@ -30,7 +30,7 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
   // Color  ThemeColor.orange = Color.fromRGBO(98, 121, 193, 1);
 
   Timer? _timer;
-  EasyLoadingStatus? _easyLoadingStatus;
+  // EasyLoadingStatus? _easyLoadingStatus;
 
   Product? _selectedSubs;
 
@@ -55,12 +55,12 @@ class _SubscriptionPageState extends State<SubscriptionPage> {
   }
 
   Future loadData() async {
-    EasyLoading.addStatusCallback((status) {
-      print('EasyLoading Status $status');
-      setState(() {
-        _easyLoadingStatus = status;
-      });
-    });
+    // EasyLoading.addStatusCallback((status) {
+    //   print('EasyLoading Status $status');
+    //   setState(() {
+    //     _easyLoadingStatus = status;
+    //   });
+    // });
 
     _timer?.cancel();
     await EasyLoading.show(maskType: EasyLoadingMaskType.custom);

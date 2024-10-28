@@ -10,10 +10,7 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../models/signin_response_model.dart';
-import '../routes/app_routes.dart';
 import '../theme/colors_theme.dart';
-import 'constants.dart';
 import 'enums/snackbar_status.dart';
 
 class AppUtils {

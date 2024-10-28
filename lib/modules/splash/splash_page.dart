@@ -1,10 +1,6 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:quizzie_thunder/modules/dashboard/dashboard_page.dart';
-import 'package:quizzie_thunder/modules/welcome/welcome_page.dart';
 import 'package:quizzie_thunder/services/main_model.dart';
-import 'dart:async';
 
 import '../../theme/colors_theme.dart';
 

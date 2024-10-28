@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizzie_thunder/theme/colors_theme.dart';
 import '../../utils/easy_faq.dart';
-import 'dart:async';
 
 class FAQPage extends StatefulWidget {
   @override

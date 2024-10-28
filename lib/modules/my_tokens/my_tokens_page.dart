@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:quizzie_thunder/modules/my_tokens/subscription_page.dart';
 import 'package:quizzie_thunder/services/main_model.dart';
 import 'package:quizzie_thunder/theme/colors_theme.dart';
@@ -23,12 +21,6 @@ class MyTokensPage extends StatefulWidget {
 const int maxFailedLoadAttempts = 3;
 
 class _MyTokensPageState extends State<MyTokensPage> {
-  static const fluidButtonText = 'Fluid';
-  static const inlineAdaptiveButtonText = 'Inline adaptive';
-  static const anchoredAdaptiveButtonText = 'Anchored adaptive';
-  static const nativeTemplateButtonText = 'Native template';
-  static const webviewExampleButtonText = 'Register WebView';
-  static const adInspectorButtonText = 'Ad Inspector';
   Color _backgroundColor = Color.fromRGBO(0, 61, 70, 1);
 
   Timer? _timer;

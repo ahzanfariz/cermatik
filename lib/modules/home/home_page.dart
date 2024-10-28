@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quizzie_thunder/modules/discover/discover_page.dart';
 import 'package:quizzie_thunder/modules/quiz_detail/quiz_detail_page.dart';
 import 'package:quizzie_thunder/services/main_model.dart';
@@ -477,56 +476,56 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  Widget _buildPromoBanner() {
-    return Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 32,
-              ),
-              Text("PROMOTION",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: ThemeColor.primary.withOpacity(0.8))),
-              SizedBox(
-                height: 16,
-              ),
-              Align(
-                alignment: Alignment.center,
-                child: Text("Take this promo now\ndon't miss it",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: ThemeColor.primary)),
-              ),
-              SizedBox(
-                height: 24,
-              ),
-              SizedBox(
-                  height: 32,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed('/subsPage');
-                    },
-                    child: Text(
-                      "🛒 Buy a Plan",
-                      style: TextStyle(color: ThemeColor.white),
-                    ),
-                    style: TextButton.styleFrom(
-                      textStyle:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(24)),
-                      backgroundColor: ThemeColor.black,
-                    ),
-                  )),
-            ]));
-  }
+  // Widget _buildPromoBanner() {
+  //   return Padding(
+  //       padding: const EdgeInsets.all(16.0),
+  //       child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           crossAxisAlignment: CrossAxisAlignment.center,
+  //           children: [
+  //             SizedBox(
+  //               height: 32,
+  //             ),
+  //             Text("PROMOTION",
+  //                 style: TextStyle(
+  //                     fontSize: 12,
+  //                     fontWeight: FontWeight.bold,
+  //                     color: ThemeColor.primary.withOpacity(0.8))),
+  //             SizedBox(
+  //               height: 16,
+  //             ),
+  //             Align(
+  //               alignment: Alignment.center,
+  //               child: Text("Take this promo now\ndon't miss it",
+  //                   textAlign: TextAlign.center,
+  //                   style: TextStyle(
+  //                       fontSize: 18,
+  //                       fontWeight: FontWeight.bold,
+  //                       color: ThemeColor.primary)),
+  //             ),
+  //             SizedBox(
+  //               height: 24,
+  //             ),
+  //             SizedBox(
+  //                 height: 32,
+  //                 child: ElevatedButton(
+  //                   onPressed: () {
+  //                     Get.toNamed('/subsPage');
+  //                   },
+  //                   child: Text(
+  //                     "🛒 Buy a Plan",
+  //                     style: TextStyle(color: ThemeColor.white),
+  //                   ),
+  //                   style: TextButton.styleFrom(
+  //                     textStyle:
+  //                         TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+  //                     shape: RoundedRectangleBorder(
+  //                         borderRadius: BorderRadius.circular(24)),
+  //                     backgroundColor: ThemeColor.black,
+  //                   ),
+  //                 )),
+  //           ]));
+  // }
 
   Widget _buildStatistics(MainModel model) {
     return Container(
@@ -696,7 +695,6 @@ class PieChartMyScoreState extends State<PieChartMyScore> {
       final isTouched = i == touchedIndex;
       final fontSize = isTouched ? 20.0 : 16.0;
       final radius = isTouched ? 110.0 : 100.0;
-      final widgetSize = isTouched ? 55.0 : 40.0;
       const shadows = [Shadow(color: Colors.black, blurRadius: 2)];
 
       switch (i) {
@@ -809,43 +807,43 @@ class PieChartMyScoreState extends State<PieChartMyScore> {
   }
 }
 
-class _Badge extends StatelessWidget {
-  const _Badge(
-    this.svgAsset, {
-    required this.size,
-    required this.borderColor,
-  });
-  final String svgAsset;
-  final double size;
-  final Color borderColor;
+// class _Badge extends StatelessWidget {
+//   const _Badge(
+//     this.svgAsset, {
+//     required this.size,
+//     required this.borderColor,
+//   });
+//   final String svgAsset;
+//   final double size;
+//   final Color borderColor;
 
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: PieChart.defaultDuration,
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: borderColor,
-          width: 2,
-        ),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: Colors.black.withOpacity(.5),
-            offset: const Offset(3, 3),
-            blurRadius: 3,
-          ),
-        ],
-      ),
-      padding: EdgeInsets.all(size * .15),
-      child: Center(
-        child: SvgPicture.asset(
-          svgAsset,
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return AnimatedContainer(
+//       duration: PieChart.defaultDuration,
+//       width: size,
+//       height: size,
+//       decoration: BoxDecoration(
+//         color: Colors.white,
+//         shape: BoxShape.circle,
+//         border: Border.all(
+//           color: borderColor,
+//           width: 2,
+//         ),
+//         boxShadow: <BoxShadow>[
+//           BoxShadow(
+//             color: Colors.black.withOpacity(.5),
+//             offset: const Offset(3, 3),
+//             blurRadius: 3,
+//           ),
+//         ],
+//       ),
+//       padding: EdgeInsets.all(size * .15),
+//       child: Center(
+//         child: SvgPicture.asset(
+//           svgAsset,
+//         ),
+//       ),
+//     );
+//   }
+// }

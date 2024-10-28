@@ -10,7 +10,6 @@ import 'package:quizzie_thunder/utils/constant.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../theme/colors_theme.dart';
-import '../../utils/app_utils.dart';
 
 class ProfilePage extends StatefulWidget {
   final MainModel model;
@@ -24,8 +23,6 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   Timer? _timer;
 
-  EasyLoadingStatus? _easyLoadingStatus;
-
   @override
   void initState() {
     // TODO: implement initState
@@ -36,12 +33,12 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Future loadData() async {
-    EasyLoading.addStatusCallback((status) {
-      print('EasyLoading Status $status');
-      setState(() {
-        _easyLoadingStatus = status;
-      });
-    });
+    // EasyLoading.addStatusCallback((status) {
+    //   print('EasyLoading Status $status');
+    //   setState(() {
+    //     _easyLoadingStatus = status;
+    //   });
+    // });
 
     _timer?.cancel();
     await EasyLoading.show(maskType: EasyLoadingMaskType.custom);

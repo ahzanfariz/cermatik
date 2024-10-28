@@ -4,7 +4,6 @@ import 'dart:io';
 import 'dart:async';
 import 'package:dio/dio.dart';
 
-import '../model/product.dart';
 // import '../models/content.dart';
 import './user_services.dart';
 

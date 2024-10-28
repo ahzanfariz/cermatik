@@ -8,7 +8,6 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:quizzie_thunder/modules/privacy_policy/privacy_policy_page.dart';
 import 'package:quizzie_thunder/modules/terms_conditions/terms_conditions_page.dart';
 import 'package:quizzie_thunder/modules/verify_otp/verify_otp_page.dart';
-import 'package:quizzie_thunder/routes/app_routes.dart';
 import 'package:quizzie_thunder/services/main_model.dart';
 import 'package:quizzie_thunder/utils/app_utils.dart';
 import 'package:quizzie_thunder/utils/enums/snackbar_status.dart';

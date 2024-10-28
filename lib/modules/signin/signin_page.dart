@@ -14,7 +14,6 @@ import 'package:quizzie_thunder/utils/app_utils.dart';
 import 'package:quizzie_thunder/utils/enums/snackbar_status.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../../routes/app_routes.dart';
 import '../../theme/colors_theme.dart';
 
 class SigninPage extends StatefulWidget {

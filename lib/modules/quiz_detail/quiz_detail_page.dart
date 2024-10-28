@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -21,7 +19,6 @@ class QuizDetailPage extends StatefulWidget {
 }
 
 class _QuizDetailPageState extends State<QuizDetailPage> {
-  static const interstitialButtonText = 'InterstitialAd';
   var _adsLoaded = false;
   static final AdRequest request = AdRequest(
     keywords: <String>['foo', 'bar'],
@@ -31,8 +28,6 @@ class _QuizDetailPageState extends State<QuizDetailPage> {
   InterstitialAd? _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
-  RewardedInterstitialAd? _rewardedInterstitialAd;
-  int _numRewardedInterstitialLoadAttempts = 0;
   int maxFailedLoadAttempts = 3;
 
   @override

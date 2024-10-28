@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizzie_thunder/modules/quiz_detail/quiz_detail_page.dart';
-import 'package:quizzie_thunder/modules/quizzes/quizzes_page.dart';
 import 'package:quizzie_thunder/services/main_model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../theme/colors_theme.dart';
-import '../../utils/app_utils.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({Key? key}) : super(key: key);
@@ -316,7 +314,6 @@ class DiscoverPage extends StatelessWidget {
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           var category = model.categories[index];
-                          final cardBgColor = AppUtils.getRandomCardBgColor();
                           return Card(
                               // color: cardBgColor,
                               shape: RoundedRectangleBorder(

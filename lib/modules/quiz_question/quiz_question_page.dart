@@ -183,9 +183,10 @@ class _QuizQuestionPageState extends State<QuizQuestionPage> {
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<MainModel>(builder: (context, child, model) {
-      return WillPopScope(
-          onWillPop: () async {
-            return await showEndQuizAlertDialog(model);
+      return PopScope(
+          onPopInvoked: (canPop) async {
+            await showEndQuizAlertDialog(model);
+            return;
           },
           child: Scaffold(
               resizeToAvoidBottomInset: false,

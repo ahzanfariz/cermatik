@@ -23,8 +23,6 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   Timer? _timer;
-  var _cardCodeController = TextEditingController();
-  EasyLoadingStatus? _easyLoadingStatus;
 
   @override
   Widget build(BuildContext context) {

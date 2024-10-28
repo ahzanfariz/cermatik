@@ -30,7 +30,6 @@ class _QuizQuestionArrangePageState extends State<QuizQuestionArrangePage> {
   var _feedbackController = TextEditingController();
   var _isInvalid = false, optionSelectSubmitted = false;
   List<String>? _dropdownAnswers = [];
-  List<String>? _answersCorrect = [];
 
   var isLoading = false;
   var questionCount = 0;
@@ -184,9 +183,10 @@ class _QuizQuestionArrangePageState extends State<QuizQuestionArrangePage> {
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<MainModel>(builder: (context, child, model) {
-      return WillPopScope(
-          onWillPop: () async {
-            return await showEndQuizAlertDialog(model);
+      return PopScope(
+          onPopInvoked: (canPop) async {
+            await showEndQuizAlertDialog(model);
+            return;
           },
           child: Scaffold(
               resizeToAvoidBottomInset: false,
