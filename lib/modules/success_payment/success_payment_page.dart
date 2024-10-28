@@ -62,7 +62,10 @@ class _SuccessPaymentPageState extends State<SuccessPaymentPage> {
     return ScopedModelDescendant<MainModel>(builder: (context, child, model) {
       return PopScope(
           canPop: false,
-          onPopInvoked: (didPop) async {
+          onPopInvokedWithResult: (didPop, result) async {
+            if (didPop) {
+              return;
+            }
             // logic
             Get.back();
             // _snackbarManager?.hideCurrentSnackBar();
