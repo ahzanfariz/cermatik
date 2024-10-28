@@ -1,4 +1,4 @@
-package cermatik.cz
+package cz.cermatik
 
 import io.flutter.embedding.android.FlutterActivity
 
