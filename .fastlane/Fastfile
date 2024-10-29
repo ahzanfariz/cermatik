@@ -7,8 +7,8 @@ platform :ios do
  build_app(scheme: "Cermatik")
  upload_to_app_store(
  app_identifier: "cz.cermatik",
- api_key_path: "ApiKey_OIHK2Q1IP5YN.p8",
- api_key_id: "66cd94bf98284b0e9ab6de6366635459",
+ api_key_path: "./ApiKey_OIHK2Q1IP5YN.p8",
+ api_key_id: "785GTLYJ95",
  api_issuer: "222e1d65-de6a-40f0-85a8-bc60436cdba7"
  )
  end
