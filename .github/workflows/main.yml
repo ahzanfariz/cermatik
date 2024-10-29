@@ -1,28 +1,29 @@
 name: Build and Deploy iOS App
 on:
  push:
- branches:
- - main
+  branches:
+     - main
 jobs:
  build-and-deploy:
- runs-on: macos-latest
-steps:
- - name: Checkout code
- uses: actions/checkout@v4
- 
-- name: Set up Ruby
- uses: actions/setup-ruby@v1
- with:
- ruby-version: '2.7'
-- name: Install Fastlane
- run: gem install fastlane -NV
-- name: Install Fastlane
- run: fastlane init
-- name: Install dependencies
- run: bundle install
-- name: Build and Deploy
- run: bundle exec fastlane release
- env:
- APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
- APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
- APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+  runs-on: macos-13
+  env:
+    APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+    APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+    APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v2 
+  - name: Set up Ruby
+    uses: ruby/setup-ruby@v1
+    with:
+      ruby-version: '2.7'
+  - name: Install public suffix     
+    run: gem install public_suffix -v 5.1.1
+  - name: Install Fastlane
+    run: gem install fastlane -NV
+  - name: Install Fastlane
+    run: fastlane init
+  - name: Install dependencies
+    run: bundle install
+  - name: Build and Deploy
+    run: bundle exec fastlane release
